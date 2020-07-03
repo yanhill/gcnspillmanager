@@ -25,6 +25,9 @@ function toggleSimaMatrix(){
         simaMatrixContainer.style.display="none";
       //  consultMaremLink.textContent="Consult Marem";
         console.log("off");
+        if(!maremDisplay){
+        containerProposito.style.display="flex";
+        }
     }
     else{
       console.log("cliquei")
