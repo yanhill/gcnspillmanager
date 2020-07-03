@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+}
+body{
+    font-size:14px;
+}
+
+.marem-window{
+    border:none;
+    overflow:auto;
+}
+.marem-container{
+    visibility:hidden;
+    z-index:-3;
+    display:none;
+}
+.tool-bar{
+    font-family: 'Share', cursive;
+    font-size: 1.2em;
+    position:relative;
+    
+   
+}
+ul{   
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    background: #272727;
+}
+.dropdown, .dropdown2{
+    background: #505050;
+}
+ul li{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+.dropdown{
+    position: absolute;
+    width: 100%;
+    flex-wrap: wrap;
+    visibility: hidden;
+   /* transition: 0.3s; */
+    left: 0;
+    top: -600%;
+    z-index: -1;
+}
+ul li a:hover{
+    color: #ffec00;
+}
+ul li:hover .dropdown{
+    visibility: visible;
+    top: 100%;
+    z-index: 0;
+}
+
+.dropdown2{
+    position:absolute;
+    left:125%;
+    width:100%;
+    top: 0;
+    flex-wrap: wrap;
+   /* transition:0.3s;*/
+    visibility: hidden;
+
+}
+
+.dropdown li:hover .dropdown2{
+    left: 100%;    
+    visibility: visible;
+}
+
+.app-description-container{
+    font-size: 1.2em;  
+    font-family: 'Share', cursive;
+    display: flex;
+    padding: 10 10 0 10;
+    background: #ffffff;
+}
+
+.app-description-container .title{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.app-description-container *{
+    margin:5px;
+}
+.company-name{
+    margin-left: auto;
+}
+
+.incomplete{
+    color:#828282;
+}
+
+.container-proposito{
+    display:flex;
+}
+
+.proposito{
+    font-size:1.2em;
+    font-family: 'Share', cursive;
+    width:40%;
+    z-index:-20;
+    margin: 0 0 100px 50px;
+    align-self: flex-end;
+}
+.titulo{
+    font-size:1.2em;
+    margin-bottom:20px;
+}
+
+/* BOTAO */
+span {
+    cursor: pointer;
+  }
+  a {
+    position: relative;
+    overflow: hidden;
+  }
+  span:hover a {
+    color: red;
+  }
+  a + input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }

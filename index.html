@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="style-sima.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="app-description-container" id="appDescriptionContainer">
+      <div class="title">Spill Manager System</div>
+      <div class="subtitle">Web app prototype </div>
+      <div class="company-name">Powered by GCN Engenharia e Tecnologia</div>
+    </div>
+   
+    <ul id="toolBar" class="tool-bar">
+        <li><a class="incomplete" href="#">File</a></li>
+        <li><a class="incomplete" href="#">Edit</a></li>
+        <li><a class="incomplete" href="#">Oil Data</a></li>
+        <li><a class="incomplete" href="#">Spill Images</a></li>
+        <li><a href="#">Simulation</a>
+            <ul class="dropdown">
+                <li><a href="#">Spill displacement</a>
+                  <ul class="dropdown2">
+                    <li><a href="#">import from GNOME</a></li>
+                    <li><a class="incomplete" href="#">import from OSCAR</a></li>
+                    <li><a class="incomplete" href="#">import from SisBahia</a></li>
+                    <li><span><a href='#'>Import from computer...</a><input type='file'/></span></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="incomplete">Weathering</a></li>
+                <li><a href="#" class="incomplete">Mechanical Removal</a></li>
+                <li><a href="#" class="incomplete">Dispersant</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Sens. Map</a>
+            <ul class="dropdown">
+              <li id="consultMaremBt" class="consult-marem-bt"><a id="consultMaremLink" href="#">Consult MAREM</a></li>  
+              <li><span><a href='#'>Import from computer...</a><input type='file'/></span></li>
+            </ul>
+        </li>
+        <li class="sima-bt" id="simaBt"><a href="#">SIMA Matrix</a></li>
+        <li><a class="incomplete" href="#">Stochastic analysis</a></li>
+        <li><a class="incomplete" href="#">Report</a></li>
+    </ul>
+
+    <div class="container-proposito" id="containerProposito">
+   <div class="proposito">
+     <div class="titulo">Justificativa de subfase</div>
+     <div class="paragrafo">O protótipo encontra-se depositado no INPI, possui avaliação por terceiros feita pelo gerente de SMS da PetroRio e foi apresentado na “VII November Conference - Innovasjon Norge”, que ocorreu em novembro de 2019 no Rio de Janeiro, na sessão de monitoramento ambiental. No desenvolvimento do protótipo contamos com a participação de membros da Escola Superior de Desenho Industrial, Engenharia Quimica, Geografia e Meio Ambiente, todos da UERJ.<br><br>O protótipo apresenta o ambiente de interação com o usuário, a sequência de abertura de telas e a integração das diferentes partes. Mapas e figuras georreferenciadas em formato vetorial *.shp (ESRI shapefile) ou raster *.tiff/*.tif (GeoTIFF) serão utilizados em ambiente único. O software terá dois formatos a serem escolhidos pelo usuário. Formato em desktop com interface web ou formato web.</div>
+    </div>
+  </div>
+
+    <div class="marem-container" id="maremContainer"> 
+      <object class="marem-window" id="maremWindow" type="text/html" data="https://abep.maps.arcgis.com/apps/webappviewer/index.html?id=e1a7af33b5ec4c4a95db1f85079903ca">
+      </object>
+   </div>
+
+   <div class="sima-matrix-container" id="simaMatrixContainer">
+    <iframe class="sima-matrix" id="simaMatrix" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmfKW_dhXY89js7wyaj07ae_Uxh_PmW2FF9Q02g1ayC6z6e2ye8vR-OJEcd6l8viAxuvhw7HVZriBd/pubhtml?gid=1138280132&amp;single=true&amp;widget=true&amp;headers=false"></iframe>"></iframe>
+   </div>
+
+  </body>
+
+  <script src="behavior.js"></script>
+  <script src="simabehavior.js"></script>
+  <script src="propositoBehavior.js"></script>
+</html>

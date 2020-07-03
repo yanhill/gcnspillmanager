@@ -1,0 +1,11 @@
+.sima-matrix-container{
+    display:none;
+    z-index:-1;
+    width:100%;
+    text-align: center;
+}
+
+.sima-matrix{
+    width:100%;
+    border:none;
+}
