@@ -3,8 +3,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style2.css">
     <link rel="stylesheet" type="text/css" href="style-sima.css">
+    <link rel="stylesheet" type="text/css" href="style-gnome.css">
+    <link rel="stylesheet" type="text/css" href="image-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+    
   </head>
 
   <body>
@@ -23,7 +26,7 @@
             <ul class="dropdown">
                 <li><a href="#">Spill displacement</a>
                   <ul class="dropdown2">
-                    <li><a href="#">import from GNOME</a></li>
+                    <li><a id="importGnomeBt" class="import-gnome-bt" href="#">import from GNOME</a></li>
                     <li><a class="incomplete" href="#">import from OSCAR</a></li>
                     <li><a class="incomplete" href="#">import from SisBahia</a></li>
                     <li><span><a href='#'>Import from computer...</a><input type='file'/></span></li>
@@ -31,10 +34,14 @@
                 </li>
                 <li><a href="#" class="incomplete">Weathering</a></li>
                 <li><a href="#" class="incomplete">Mechanical Removal</a></li>
-                <li><a href="#" class="incomplete">Dispersant</a></li>
+                <li><a href="#">Dispersant</a>
+                  <ul class="dropdown2">
+                    <li><a id="consultRocBt" class="consult-roc-bt" href="#">Consult ROC</a></li>
+                  </ul>
+                </li>
             </ul>
         </li>
-        <li><a href="#">Sens. Map</a>
+        <li><a href="#">Sensibility Map</a>
             <ul class="dropdown">
               <li id="consultMaremBt" class="consult-marem-bt"><a id="consultMaremLink" href="#">Consult MAREM</a></li>  
               <li><span><a href='#'>Import from computer...</a><input type='file'/></span></li>
@@ -52,13 +59,19 @@
     </div>
   </div>
 
+
+
     <div class="marem-container" id="maremContainer"> 
       <object class="marem-window" id="maremWindow" type="text/html" data="https://abep.maps.arcgis.com/apps/webappviewer/index.html?id=e1a7af33b5ec4c4a95db1f85079903ca">
       </object>
    </div>
 
    <div class="sima-matrix-container" id="simaMatrixContainer">
-    <iframe class="sima-matrix" id="simaMatrix" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmfKW_dhXY89js7wyaj07ae_Uxh_PmW2FF9Q02g1ayC6z6e2ye8vR-OJEcd6l8viAxuvhw7HVZriBd/pubhtml?gid=1138280132&amp;single=true&amp;widget=true&amp;headers=false"></iframe>"></iframe>
+    <iframe class="sima-matrix" id="simaMatrix" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmfKW_dhXY89js7wyaj07ae_Uxh_PmW2FF9Q02g1ayC6z6e2ye8vR-OJEcd6l8viAxuvhw7HVZriBd/pubhtml?gid=1138280132&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+   </div>
+
+   <div class="consult-gnome-container" id="consultGnomeContainer">
+    <iframe class="consult-gnome-window" id="consultGnomeWindow" src="http://localhost:8080"></iframe>
    </div>
 
   </body>
@@ -66,4 +79,5 @@
   <script src="behavior.js"></script>
   <script src="simabehavior.js"></script>
   <script src="propositoBehavior.js"></script>
+  <script src="gnomebehavior.js"></script>
 </html>
